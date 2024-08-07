@@ -2,8 +2,7 @@ package com.nttdata.steps;
 
 import com.nttdata.model.Articulo;
 import io.restassured.response.Response;
-import net.serenitybdd.rest.SerenityRest;
-import net.thucydides.core.annotations.Step;
+import org.junit.Assert;
 
 import java.util.List;
 
@@ -23,12 +22,11 @@ public class ArticuloStep {
         response =
         given()
                 .contentType("application/json")
-                .log()
-                .all()
+                //.log().all()
                 .get(URL+"/posts")
-               // .then()
-                //.log()
-                //.all()
+                .then()
+                //.log().all()
+                .extract().response();
                 ;
 
     };
@@ -43,4 +41,14 @@ public class ArticuloStep {
     }
 
 
+    public void validarCodigoDeRespuesta373838383(int arg0) {
+        System.out.println("status code: " + response.statusCode());
+        Assert.assertEquals(arg0, response.statusCode());
+
+    }
+
+
+    public void metodoquemeheinventado() {
+
+    }
 }

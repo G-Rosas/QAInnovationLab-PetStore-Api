@@ -1,6 +1,7 @@
 package com.nttdata.glue;
 
 import com.nttdata.steps.ArticuloStep;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -24,5 +25,12 @@ public class ArticuloStepDef {
     @Then("imprimo los articulos")
     public void imprimoLosArticulos() {
         articulo.imprimirArticulos();
+    }
+
+
+
+    @And("validar codigo de respuesta sea {int}")
+    public void validarCodigoDeRespuestaSea(int arg0) {
+        articulo.validarCodigoDeRespuesta373838383(arg0);
     }
 }
