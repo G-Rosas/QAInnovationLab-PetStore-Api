@@ -32,7 +32,7 @@ public class CrearUsuarioStepsDefs {
     }
 
 
-    @Given("que tengo los datos {int}, {string}, {string}, {string}, {string}, {string}, {string}, {int}}")
-    public void queTengoLosDatosIdStatus(int arg0, String arg1, String arg2, String arg3, String arg4, String arg5, String arg6, int arg5) {
+    @When("envio una peticion GET al endpoint users")
+    public void envioUnaPeticionGETAlEndpointUsers() {
     }
 }
